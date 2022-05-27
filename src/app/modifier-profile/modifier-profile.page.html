@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="back-img">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title size="small" color="dark"><b>Recouvrement des Impayés</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+<ion-content>
+      <div color="secondary" position="stacked" class="ion-text-center" >
+
+ <ion-label position="fixed" class="logo" color="dark"> Modifier Profil</ion-label>
+      </div>
+<br><br>
+  <form>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Prenom</ion-label>
+      <ion-input type="text" required id="prenom" name="prenom"  [(ngModel)]="currentUtilisateur.prenom" ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input type="text" id="nom" name="nom"   [(ngModel)]="currentUtilisateur.nom" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" id="email" name="email"  required [(ngModel)]="currentUtilisateur.email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Adresse</ion-label>
+      <ion-input type="text" id="adresse" required name="adresse" [(ngModel)]="currentUtilisateur.adresse"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password" id="motDePasse" name="motDePasse" required [(ngModel)]="currentUtilisateur.motDePasse" ></ion-input>
+    </ion-item>
+    <br><br>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="success" expand="block" shape="round" (click)="modifierProfile()">Modifier</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>

@@ -1,0 +1,48 @@
+
+
+<ion-header   color="dark" >
+  <ion-toolbar color="dark" >
+    <ion-buttons  slot="start">
+      <ion-menu-button  ></ion-menu-button>
+    </ion-buttons>
+    <ion-title> <h4>Recouvrement Impayés </h4></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+<ion-card class="card">
+  <ion-card-header>
+    <ion-card-title> Bienvenu </ion-card-title>
+    <ion-item large class="card">
+      <ion-icon name="person-circle-outline" color="dark" style="zoom:1.5;" ></ion-icon>
+      <h5 color="dark">      {{currentUtilisateur.prenom}} {{currentUtilisateur.nom}}</h5>
+      
+    </ion-item>
+  
+
+</ion-card-header>
+</ion-card>
+
+  <ion-card  button [routerLink]="['/facture']" >
+
+    <ion-card-header>
+           <ion-card-title> Payer Factures <ion-img size="small" src="../../assets/icon/search.jpg"></ion-img> </ion-card-title>
+
+   </ion-card-header>
+  </ion-card>
+
+    <ion-card  button   [routerLink]="['/historique-paiement']">
+      <ion-card-header>
+             <ion-card-title> Liste des Paiements  <ion-img size="small" src="../../assets/icon/paiement.png"></ion-img> </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+  
+  </ion-content>
+
+
+
+    
+
+
